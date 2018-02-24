@@ -17,5 +17,10 @@ export class ProductService {
   get(productId){
     return this.db.object('/products/'+productId);
   }
+  //update product, firebase does not like to when id is part of the object when it updated. 
+  //therefore productId is pass as a seperate parameter to the update method. 
+  update(productId,product){
+    return this.db.object('products/'+productId).update(product);
+  }
 
 }
