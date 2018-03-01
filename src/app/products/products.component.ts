@@ -1,3 +1,4 @@
+import { CategoryService } from './../category.service';
 import { Product } from './../models/product';
 import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
@@ -10,9 +11,11 @@ import { Component, OnInit } from '@angular/core';
 export class ProductsComponent {
 
   products$;
-
-  constructor(private productService:  ProductService) { 
+  categories$;
+  constructor(private productService:  ProductService, private categoryService: CategoryService) { 
     this.products$ = productService.getAll();
+    this.categories$ = categoryService.getAll();
+
   }
 
 }
