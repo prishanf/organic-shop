@@ -3,6 +3,7 @@ import { ProductService } from './../../product.service';
 import { CategoryService } from './../../category.service';
 import { Component, OnInit } from '@angular/core';
 import 'rxjs/add/operator/take';
+import { Product } from '../../models/product';
 
 @Component({
   selector: 'app-product-form',
@@ -12,7 +13,7 @@ import 'rxjs/add/operator/take';
 export class ProductFormComponent implements OnInit {
 
   categories$;
-  product = {};
+  product: any = {};
   id; 
 
   constructor(
