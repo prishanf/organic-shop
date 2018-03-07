@@ -27,6 +27,7 @@ import { UserService } from './user.service';
 import { AuthGuard } from './auth-guard.service';
 import { AdminAuthGuard } from './admin-auth-guard.service';
 import { ProductFormComponent } from './admin/product-form/product-form.component';
+import { ShoppingCartService } from './shopping-cart.service';
 
 import { CustomFormsModule } from 'ng2-validation'
 import { DataTableModule } from 'angular5-data-table';
@@ -98,7 +99,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     UserService,
     AdminAuthGuard,
     CategoryService,
-    ProductService
+    ProductService,
+    ShoppingCartService
   ],
   bootstrap: [AppComponent]
 })
